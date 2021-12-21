@@ -2,24 +2,28 @@
 <template>
     <div class="white-board-tools">
         <div class="tool-box">
-            <van-grid clickable :column-num="4">
-                <van-grid-item :class="draw ? 'icon-active' : '' " @click="draw = true" >
-                    <van-icon name="edit" size="1.4rem" />
-                    <span class="grid-text">画笔</span>
-                </van-grid-item>
-                <van-grid-item :class="!draw ? 'icon-active' : '' " @click="draw = false" >
-                    <van-icon name="bulb-o" size="1.4rem" />
-                    <span class="grid-text">橡皮擦</span>
-                </van-grid-item>
-                <van-grid-item @click="$emit('clear')">
-                    <van-icon name="delete-o" size="1.4rem" />
-                    <span class="grid-text">清空</span>
-                </van-grid-item>
-                <van-grid-item @click="$emit('save')">
-                    <van-icon name="photo-o" size="1.4rem" />
-                    <span class="grid-text">保存</span>
-                </van-grid-item>
-            </van-grid>
+            <div 
+                class="tool-box-item" 
+                :class="currentTool === item.type ? 'tool-box-item-acitve' : ''"
+                v-for="(item, index) in toolsList" 
+                :key="index"
+                @click="currentTool = item.type"
+            >
+                <div v-if="['line'].includes(item.type)" class="tool-line">/</div>
+                <i v-else :class="item.icon"></i>
+            </div>
+            <div class="tool-box-item">
+                <i class="fa fa-undo"></i>
+                <!-- <p>撤销</p> -->
+            </div>
+            <div class="tool-box-item">
+                <i class="fa fa-trash-o"></i>
+                <!-- <p>清空</p> -->
+            </div>
+            <div class="tool-box-item">
+                <i class="fa fa-picture-o"></i>
+                <!-- <p>保存</p> -->
+            </div>
         </div>
     </div>
 </template>
@@ -34,11 +38,16 @@ export default {
     },
     data() {
         return {
-            
+            toolsList: [
+                { type: 'pencil', icon: 'fa fa-pencil' },
+                { type: 'line', icon: 'tool-line' },
+                { type: 'brush', icon: 'fa fa-paint-brush' },
+                { type: 'eraser', icon: 'fa fa-eraser' }
+            ]
         };
     },
     computed: {
-        draw: { // true 为画笔  false 为橡皮擦
+        currentTool: {
             get() {
                 return this.value
             },
@@ -51,33 +60,37 @@ export default {
         
     },
     methods: {
-        test() {
-            this.draw = !this.draw
-            console.log(111)
-        }
+        
     },
 };
 </script>
 
 <style scoped lang="less">
 .white-board-tools {
-    width: 100%;
-    margin-bottom: 10px;
-    /deep/.van-grid-item {
-        .van-grid-item__content{
-            padding:15px 10px;
-            
-        }
-    }
-    .grid-text{
-        margin-top:1vw;
-        font-size: 14px;
-    }
-    .icon-active{
-        color: #c73420;
-    }
     .tool-box {
         width: 100%;
+        display: flex;
+        .tool-box-item{
+            flex: 1;
+            box-sizing: border-box;
+            padding: 2.5vw 2vw;
+            border-right: 1px solid #ededed;
+            border-bottom: 1px solid #ededed;
+            i{
+                font-size: 1.1em;
+            }
+            p{
+                font-size: 0.8em;
+                margin-top: 0.5vw;
+            }
+        }
+        .tool-line{
+            font-weight: 700;
+        }
+        .tool-box-item-acitve{
+            background-color: rgba(0, 0, 0, .5);
+            color: rgba(255, 255, 255, 1);
+        }
     }
 }
 </style>
