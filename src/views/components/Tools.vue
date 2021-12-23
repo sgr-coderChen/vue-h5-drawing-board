@@ -12,17 +12,25 @@
                 <div v-if="['line'].includes(item.type)" class="tool-line">/</div>
                 <i v-else :class="item.icon"></i>
             </div>
-            <div class="tool-box-item">
+            <div class="tool-box-item" @click.stop="$emit('undo')">
                 <i class="fa fa-undo"></i>
                 <!-- <p>撤销</p> -->
             </div>
-            <div class="tool-box-item">
+            <div class="tool-box-item" @click.stop="$emit('reset')">
                 <i class="fa fa-trash-o"></i>
                 <!-- <p>清空</p> -->
             </div>
-            <div class="tool-box-item">
+            <div class="tool-box-item" @click.stop="$emit('save')">
                 <i class="fa fa-picture-o"></i>
                 <!-- <p>保存</p> -->
+            </div>
+            <div class="tool-box-item" @click.stop="$emit('select-color')">
+                <i class="fa fa-pie-chart"></i>
+                <!-- <p>取色</p> -->
+            </div>
+            <div class="tool-box-item" @click.stop="$emit('select-line-width')">
+                <i class="fa fa-minus"></i>
+                <!-- <p>笔触</p> -->
             </div>
         </div>
     </div>
@@ -32,7 +40,7 @@
 export default {
     props: {
         value: {
-            type: Boolean,
+            type: String,
             default: null
         }
     },
