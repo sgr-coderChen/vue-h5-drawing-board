@@ -9,28 +9,22 @@
                 :key="index"
                 @click="currentTool = item.type"
             >
-                <div v-if="['line'].includes(item.type)" class="tool-line">/</div>
-                <i v-else :class="item.icon"></i>
-            </div>
-            <div class="tool-box-item" @click.stop="$emit('undo')">
-                <i class="fa fa-undo"></i>
-                <!-- <p>撤销</p> -->
-            </div>
-            <div class="tool-box-item" @click.stop="$emit('reset')">
-                <i class="fa fa-trash-o"></i>
-                <!-- <p>清空</p> -->
-            </div>
-            <div class="tool-box-item" @click.stop="$emit('save')">
-                <i class="fa fa-picture-o"></i>
-                <!-- <p>保存</p> -->
+                <i :class="item.icon"></i>
             </div>
             <div class="tool-box-item" @click.stop="$emit('select-color')">
-                <i class="fa fa-pie-chart"></i>
-                <!-- <p>取色</p> -->
+                <i class="iconfont icon-diaoseban"></i>
             </div>
             <div class="tool-box-item" @click.stop="$emit('select-line-width')">
-                <i class="fa fa-minus"></i>
-                <!-- <p>笔触</p> -->
+                <i class="iconfont icon-bicuxi"></i>
+            </div>
+            <div class="tool-box-item" @click.stop="$emit('undo')">
+                <i class="iconfont icon-chexiao"></i>
+            </div>
+            <div class="tool-box-item" @click.stop="$emit('reset')">
+                <i class="iconfont icon-shanchu"></i>
+            </div>
+            <div class="tool-box-item" @click.stop="$emit('save')">
+                <i class="iconfont icon-xiazai"></i>
             </div>
         </div>
     </div>
@@ -47,10 +41,10 @@ export default {
     data() {
         return {
             toolsList: [
-                { type: 'pencil', icon: 'fa fa-pencil' },
-                { type: 'line', icon: 'tool-line' },
-                { type: 'brush', icon: 'fa fa-paint-brush' },
-                { type: 'eraser', icon: 'fa fa-eraser' }
+                { type: 'pencil', icon: 'iconfont icon-pencil-full' },
+                { type: 'line', icon: 'iconfont icon-xianduan' },
+                { type: 'brush', icon: 'iconfont icon--yingguangbi' },
+                { type: 'eraser', icon: 'iconfont icon-xiangpica' }
             ]
         };
     },
@@ -73,32 +67,33 @@ export default {
 };
 </script>
 
-<style scoped lang="less">
-.white-board-tools {
-    .tool-box {
-        width: 100%;
-        display: flex;
-        .tool-box-item{
-            flex: 1;
-            box-sizing: border-box;
-            padding: 2.5vw 2vw;
-            border-right: 1px solid #ededed;
-            border-bottom: 1px solid #ededed;
-            i{
-                font-size: 1.1em;
-            }
-            p{
-                font-size: 0.8em;
-                margin-top: 0.5vw;
-            }
-        }
-        .tool-line{
-            font-weight: 700;
-        }
-        .tool-box-item-acitve{
-            background-color: rgba(0, 0, 0, .5);
-            color: rgba(255, 255, 255, 1);
-        }
-    }
+<style scoped lang="css">
+.white-board-tools .tool-box {
+    width: 100%;
+    display: flex;
+}
+.white-board-tools .tool-box-item{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 2.5vw 2vw;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+.white-board-tools .no-right-border{
+    border-right: none;
+}
+.white-board-tools .tool-box-item i {
+    font-size: 1.2em;
+}
+.white-board-tools .tool-box-item p {
+    font-size: 0.8em;
+    margin-top: 0.5vw;
+}
+.white-board-tools .tool-line{
+    font-weight: 700;
+}
+.white-board-tools .tool-box-item-acitve{
+    background-color: rgba(0, 0, 0, .5);
+    color: rgba(255, 255, 255, 1);
 }
 </style>

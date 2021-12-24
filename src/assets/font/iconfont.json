@@ -1,0 +1,93 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1248",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "f013f",
+      "unicode_decimal": 983359
+    },
+    {
+      "icon_id": "136387",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "f0304",
+      "unicode_decimal": 983812
+    },
+    {
+      "icon_id": "482610",
+      "name": "调色板",
+      "font_class": "diaoseban",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "4890374",
+      "name": "撤销",
+      "font_class": "chexiao",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
+      "icon_id": "10224230",
+      "name": "笔粗细",
+      "font_class": "bicuxi",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "10736815",
+      "name": "线段",
+      "font_class": "xianduan",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "11399569",
+      "name": "橡皮擦",
+      "font_class": "xiangpica",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "11592825",
+      "name": "5-荧光笔",
+      "font_class": "-yingguangbi",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "18171133",
+      "name": "铅笔,编辑",
+      "font_class": "pencil-full",
+      "unicode": "ea14",
+      "unicode_decimal": 59924
+    },
+    {
+      "icon_id": "19519542",
+      "name": "荧光笔",
+      "font_class": "yingguangbi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "21692748",
+      "name": "粗细",
+      "font_class": "cuxi",
+      "unicode": "e734",
+      "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "22084809",
+      "name": "调色板",
+      "font_class": "tiaoseban",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    }
+  ]
+}
