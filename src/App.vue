@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <router-view/>
+    <DrawingBoard />
   </div>
 </template>
+
+<script>
+// import DrawingBoard from './components/index.vue'
+export default {
+  // components: { DrawingBoard }
+}
+</script>
 

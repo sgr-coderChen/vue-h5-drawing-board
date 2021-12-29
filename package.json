@@ -1,20 +1,26 @@
 {
-  "name": "vue-h5-drawing-board",
+  "name": "vue-drawing-board",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "src/index.js",
+  "author": "chenhui",
+  "description": "画板demo",
+  "license": "MIT",
+  "keywords": [
+    "vue2",
+    "canvas"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name vue-drawing-board --dest lib src/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
   },

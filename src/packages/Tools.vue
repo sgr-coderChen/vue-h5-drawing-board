@@ -32,6 +32,7 @@
 
 <script>
 export default {
+    name: 'Tools',
     props: {
         value: {
             type: String,
@@ -67,7 +68,7 @@ export default {
 };
 </script>
 
-<style scoped lang="css">
+<style lang="css">
 .white-board-tools .tool-box {
     width: 100%;
     display: flex;

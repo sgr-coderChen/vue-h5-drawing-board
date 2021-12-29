@@ -1,6 +1,6 @@
 <template>
     <div
-        id="draw-board"
+        class="draw-board-box"
         @click.stop="(showColorPicker = false), (showLineWidthRange = false)"
     >
         <ToolBox
@@ -21,16 +21,18 @@
                 v-model="penAttibutes.width"
                 class="font-range-input"
                 type="range"
+                max="20"
             />
         </div>
     </div>
 </template>
 
 <script>
-import ToolBox from "./components/Tools.vue";
-import ColorPicker from "./components/ColorPicker.vue";
+import ToolBox from "./Tools.vue";
+import ColorPicker from "./ColorPicker.vue";
 
 export default {
+    name: 'DrawingBoard',
     data() {
         return {
             currentTool: "pencil", // 工具类型
@@ -42,7 +44,7 @@ export default {
             ctx: null,
             //  笔触属性
             penAttibutes: {
-                width: 12,
+                width: 4,
                 lineCap: "round",
                 lineJoin: "round",
                 strokeStyle: "#000",
@@ -292,39 +294,39 @@ export default {
 };
 </script>
 
-<style scoped lang="css">
-#draw-board {
+<style lang="css">
+.draw-board-box {
     text-align: center;
     position: relative;
     overflow: hidden;
     width: 100%;
 }
-#draw-board .color-picker-box {
+.draw-board-box .color-picker-box {
     right: 5vw;
     position: fixed;
     top: 22vw;
 }
-#draw-board .font-range {
+.draw-board-box .font-range {
     right: 5vw;
     position: fixed;
     top: 14vw;
 }
-#draw-board .font-range-input {
+.draw-board-box .font-range-input {
     width: 100%;
 }
-#draw-board .tool-box-container {
+.draw-board-box .tool-box-container {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #fff;
 }
-#draw-board .flex-row {
+.draw-board-box .flex-row {
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 100%;
 }
-#draw-board .draw-board-container {
+.draw-board-box .draw-board-container {
     background-color: #fff;
 }
 </style>
