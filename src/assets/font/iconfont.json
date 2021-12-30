@@ -1,23 +1,37 @@
 {
-  "id": "",
-  "name": "",
+  "id": "3056168",
+  "name": "no name",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3398667",
+      "name": "橡皮擦",
+      "font_class": "xiangpica1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "6699179",
+      "name": "橡皮擦 ",
+      "font_class": "eraser",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "1248",
       "name": "删除",
       "font_class": "shanchu",
-      "unicode": "f013f",
-      "unicode_decimal": 983359
+      "unicode": "e600",
+      "unicode_decimal": 58880
     },
     {
       "icon_id": "136387",
       "name": "下载",
       "font_class": "xiazai",
-      "unicode": "f0304",
-      "unicode_decimal": 983812
+      "unicode": "e601",
+      "unicode_decimal": 58881
     },
     {
       "icon_id": "482610",

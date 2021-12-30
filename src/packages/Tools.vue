@@ -44,8 +44,8 @@ export default {
             toolsList: [
                 { type: 'pencil', icon: 'iconfont icon-pencil-full' },
                 { type: 'line', icon: 'iconfont icon-xianduan' },
-                { type: 'brush', icon: 'iconfont icon--yingguangbi' },
-                { type: 'eraser', icon: 'iconfont icon-xiangpica' }
+                { type: 'brush', icon: 'iconfont icon-yingguangbi' },
+                { type: 'eraser', icon: 'iconfont icon-eraser' }
             ]
         };
     },

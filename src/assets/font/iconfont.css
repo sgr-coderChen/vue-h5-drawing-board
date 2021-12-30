@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1640311234303') format('truetype');
+  font-family: "iconfont"; /* Project id 3056168 */
+  src: url('iconfont.woff2?t=1640830962888') format('woff2'),
+       url('iconfont.woff?t=1640830962888') format('woff'),
+       url('iconfont.ttf?t=1640830962888') format('truetype');
 }
 
 .iconfont {
@@ -11,12 +13,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-xiangpica1:before {
+  content: "\e614";
+}
+
+.icon-eraser:before {
+  content: "\e602";
+}
+
 .icon-shanchu:before {
-  content: "\f013f";
+  content: "\e600";
 }
 
 .icon-xiazai:before {
-  content: "\f0304";
+  content: "\e601";
 }
 
 .icon-diaoseban:before {

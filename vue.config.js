@@ -1,17 +1,9 @@
 module.exports = {
     css: {
-        extract: false
+        extract: false,  // 将组件里的css打入到umd.js中,不需要额外在安装插件后引入css (注意：公共style文件夹的样式需要在入口文件单独引入 src/index.js)
     },
-    configureWebpack: {
-        module: {
-            rules: [
-                {
-                    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/, // 处理字体
-                    use: {
-                        loader: 'file-loader'
-                    }
-                },
-            ]
-        }
+    productionSourceMap: false, // 生产环境 去除 map文件
+    externals: {
+        'vue': 'Vue',
     }
 }

@@ -1,5 +1,5 @@
 import DrawingBoard from './packages/index.vue';
-import './assets/style/index.css'
+import './assets/style/index.css' // 公共style 需要在入口文件额外引入
 
 const components = [ DrawingBoard ]
 
@@ -12,6 +12,6 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue) // window中有Vue时去install()
 }
 
-export default {
-    install
-}
+DrawingBoard.install = install
+
+export default DrawingBoard

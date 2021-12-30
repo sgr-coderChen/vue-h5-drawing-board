@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// import DrawingBoard from './components/index.vue'
+// import DrawingBoard from './packages/index.vue'
 export default {
   // components: { DrawingBoard }
 }
