@@ -6,8 +6,18 @@
 
 <script>
 // import DrawingBoard from './packages/index.vue'
+import DrawingBoard from '../lib/vue-drawing-board.umd.min'
+
 export default {
-  // components: { DrawingBoard }
+  components: { DrawingBoard }
 }
 </script>
+
+<style lang="css">
+*{
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+</style>
 

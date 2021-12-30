@@ -130,6 +130,7 @@ export default {
         },
         //  移动
         move(ev) {
+            ev.preventDefault() // 防止ios左右回弹
             ev = ev.touches ? ev.touches[0] : ev;
             const { x, y } = this.getPos(ev);
             if (!this.painting) return;
@@ -294,12 +295,13 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .draw-board-box {
     text-align: center;
     position: relative;
     overflow: hidden;
     width: 100%;
+    height: 100%;
 }
 .draw-board-box .color-picker-box {
     right: 5vw;

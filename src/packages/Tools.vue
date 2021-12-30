@@ -68,7 +68,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .white-board-tools .tool-box {
     width: 100%;
     display: flex;
