@@ -1,6 +1,6 @@
 {
   "name": "vue-drawing-board-ch",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main": "lib/vue-drawing-board.umd.min.js",
   "author": "chenhui",
@@ -9,7 +9,8 @@
   "homepage": "https://github.com/sgr-coderChen/vue-h5-drawing-board",
   "keywords": [
     "vue2",
-    "canvas"
+    "canvas",
+    "drawing-board"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -17,13 +18,14 @@
     "lib": "vue-cli-service build --target lib --name vue-drawing-board --dest lib src/index.js"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
   },
   "browserslist": [
     "> 1%",
